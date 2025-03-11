@@ -1,7 +1,7 @@
-#poll-container {
+#pole-container {
     position: relative;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #000000;
 }
 
 #hanging-rope {
@@ -10,25 +10,25 @@
     right: 0;
     width: 10px;
     height: 50px;
-    background-color: black;
+    background-color: white;
 }
 
-#poll-top {
-    width: 200px;
+#pole-top {
+    width: 150px;
     height: 10px;
-    background-color: black;
-    margin-left: 120px;
+    background-color: white;
+    margin-left: 95px;
 }
 
-#poll-middle {
+#pole-middle {
     width: 10px;
     height: 300px;
-    background-color: black;
-    margin-left: 120px;
+    background-color: white;
+    margin-left: 95px;
 }
 
-#poll-bottom {
-    width: 250px;
+#pole-bottom {
+    width: 200px;
     height: 10px;
-    background-color: black;
+    background-color: white;
 }
