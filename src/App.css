@@ -1,6 +1,12 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.wrapper {
+  min-width: 540px;
+  min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(89, 89, 89);
 }
