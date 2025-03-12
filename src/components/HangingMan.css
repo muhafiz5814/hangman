@@ -39,3 +39,21 @@
     transform: rotate(125deg);   
     transform-origin: left top;
 }
+
+.leg{
+    height: 70px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    top: 180px;
+    right: 0;
+    transform-origin: center top;
+}
+
+.right-leg {
+    transform: rotate(-35deg);
+}
+
+.left-leg {
+    transform: rotate(35deg);   
+}
