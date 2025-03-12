@@ -24,20 +24,17 @@
     width: 10px;
     background-color: white;
     position: absolute;
-    top: 120px;
-    
+    top: 130px;
+    right: 0;
+    transform-origin: center top;
 }
 
 .right-arm {
-    right: 5px;
-    transform: rotate(-125deg);
-    transform-origin: right top;
+    transform: rotate(-120deg);
 }
 
 .left-arm {
-    right: -5px;
-    transform: rotate(125deg);   
-    transform-origin: left top;
+    transform: rotate(120deg);      
 }
 
 .leg{
