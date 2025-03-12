@@ -1,3 +1,5 @@
+import HangingMan from "./HangingMan";
+
 import "./HangmanDrawing.css";
 
 const HangmanDrawing = () => {
@@ -7,6 +9,7 @@ const HangmanDrawing = () => {
             <div id="hanging-rope" />
             <div id="pole-middle" />
             <div id="pole-bottom" />
+            <HangingMan />
         </div>
     )
 }
