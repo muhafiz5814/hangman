@@ -18,3 +18,24 @@
     top: 100px;
     right: 0px;
 }
+
+.arm {
+    height: 70px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    
+}
+
+.right-arm {
+    right: 5px;
+    transform: rotate(-125deg);
+    transform-origin: right top;
+}
+
+.left-arm {
+    right: -5px;
+    transform: rotate(125deg);   
+    transform-origin: left top;
+}
