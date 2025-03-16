@@ -15,8 +15,13 @@ function App() {
 
   const incorrectGuesses = guessedLetters.filter(letter => !randomWord.includes(letter));
 
-  // console.log("incorrect guesses: ", incorrectGuesses);
-  // console.log("guessed letters", guessedLetters);
+  const addGuessedLetter = (letter: string) => {
+    if (guessedLetters.includes(letter)) return;
+
+    setGuessedLetters(currentLetters => [...currentLetters, letter]);
+  }
+  console.log("incorrect guesses: ", incorrectGuesses);
+  console.log("guessed letters", guessedLetters);
 
   return (
     <div className='wrapper'>
@@ -24,7 +29,7 @@ function App() {
 
       <HangmanDrawing />
       <HangmanWord wordToGuess={randomWord} guessedLetters={ guessedLetters } />
-      <Keyboard setGuessedLetters={ setGuessedLetters } incorrectGuesses={incorrectGuesses} />
+      <Keyboard addGuessedLetter={ addGuessedLetter } incorrectGuesses={incorrectGuesses} />
 
       <p>
         Made with love by <strong>Muhafiz Raza</strong> using Vite + React
