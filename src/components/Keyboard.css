@@ -1,0 +1,26 @@
+.keyboard-div {
+    margin-top: 20px;
+    min-width: 400px;
+    width: 80vw;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 5px;
+}
+
+.key {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: none;
+    border: 2px solid white;
+}
+
+.key:disabled {
+    border-color: inherit !important;
+}
+
+.key:hover:not(:disabled),
+.key:focus:not(:disabled) {
+    background-color: aqua;
+    color: black;
+}
