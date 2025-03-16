@@ -1,8 +1,7 @@
 import "./HangmanWord.css";
 
-const HangmanWord = () => {
+const HangmanWord = ({wordToGuess }: {wordToGuess: string}) => {
 
-    const wordToGuess: string = "random";
     return (
         <div className="word-to-guess">
             {wordToGuess.split("").map((char, index) => (
