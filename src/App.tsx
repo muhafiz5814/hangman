@@ -27,7 +27,7 @@ function App() {
     <div className='wrapper'>
       <div className='result-message'>Win / Lose</div>
 
-      <HangmanDrawing />
+      <HangmanDrawing totalIncorrectGuesses = {incorrectGuesses.length} />
       <HangmanWord wordToGuess={randomWord} guessedLetters={ guessedLetters } />
       <Keyboard addGuessedLetter={ addGuessedLetter } incorrectGuesses={incorrectGuesses} />
 
