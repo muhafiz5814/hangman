@@ -13,7 +13,10 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
-  console.log(guessedLetters);
+  const incorrectGuesses = guessedLetters.filter(letter => !randomWord.includes(letter));
+
+  // console.log("incorrect guesses: ", incorrectGuesses);
+  // console.log("guessed letters", guessedLetters);
 
   return (
     <div className='wrapper'>
@@ -21,7 +24,7 @@ function App() {
 
       <HangmanDrawing />
       <HangmanWord wordToGuess={randomWord} guessedLetters={ guessedLetters } />
-      <Keyboard setGuessedLetters={ setGuessedLetters } />
+      <Keyboard setGuessedLetters={ setGuessedLetters } incorrectGuesses={incorrectGuesses} />
 
       <p>
         Made with love by <strong>Muhafiz Raza</strong> using Vite + React
