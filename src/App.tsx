@@ -20,7 +20,7 @@ function App() {
       <div className='result-message'>Win / Lose</div>
 
       <HangmanDrawing />
-      <HangmanWord wordToGuess={randomWord} />
+      <HangmanWord wordToGuess={randomWord} guessedLetters={ guessedLetters } />
       <Keyboard setGuessedLetters={ setGuessedLetters } />
 
       <p>
