@@ -1,6 +1,6 @@
 import "./HangmanWord.css";
 
-const HangmanWord = ({ wordToGuess, guessedLetters }: { wordToGuess: string, guessedLetters: string[] }) => {
+const HangmanWord = ({ wordToGuess, guessedLetters, result }: { wordToGuess: string, guessedLetters: string[], result: string | undefined }) => {
     
     console.log(wordToGuess);
 
@@ -10,7 +10,10 @@ const HangmanWord = ({ wordToGuess, guessedLetters }: { wordToGuess: string, gue
                 <div className="character-div"  key={index}>
                     <span
                         className="character-in-word-to-guess"
-                        style={{ visibility: guessedLetters.includes(char) ? "visible" : "hidden" }}
+                        style={{
+                            visibility: result ? "visible" : guessedLetters.includes(char) ? "visible" : "hidden",
+                            color: guessedLetters.includes(char) ? "white" : "red"
+                        }}
                     >
                         {char.toUpperCase()}
                     </span>
