@@ -33,8 +33,8 @@ function App() {
       {result &&
         (
           result === "won"
-            ? <div className='result-message'>You won!</div>
-            : <div className='result-message'>You lost! try again.</div>
+            ? <div className='result-message win-message'>You won!</div>
+            : <div className='result-message lose-message'>You lost! try again.</div>
         )
       }
       

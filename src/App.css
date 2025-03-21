@@ -11,3 +11,68 @@
   justify-content: center;
   align-items: center;
 }
+
+.result-message {
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px;
+}
+
+.lose-message {
+  color: rgb(255, 0, 0);
+  animation: show-up 0.25s ease-in;
+}
+
+.win-message {
+  color: rgb(0, 255, 0);
+  animation: bubble-up 3s linear, bounce 2.5s linear 3s infinite;
+}
+
+@keyframes show-up {
+  from {
+    opacity: 25%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes bubble-up {
+  0% {
+    scale: 0;
+  }
+
+  50% {
+    scale: 150%;
+  }
+  
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 150%;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 720px) {
+  .result-message {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .result-message {
+    font-size: 2.5rem;
+  }
+}
