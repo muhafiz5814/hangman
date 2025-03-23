@@ -72,11 +72,13 @@ function App() {
 
   return (
     <div className='wrapper'>
+
+      {result && <div className='reload-message'>Press Enter or Refresh to try again.</div>}
       {result &&
         (
           result === "won"
             ? <div className='result-message win-message'>You won!</div>
-            : <div className='result-message lose-message'>You lost! try again.</div>
+            : <div className='result-message lose-message'>You lost!</div>
         )
       }
       
