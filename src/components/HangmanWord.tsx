@@ -6,8 +6,6 @@ type HangmanWordProps = {
     result: string | undefined
 }
 const HangmanWord = ({ wordToGuess, guessedLetters, result }: HangmanWordProps) => {
-    
-    console.log(wordToGuess);
 
     return (
         <div className="word-to-guess">
