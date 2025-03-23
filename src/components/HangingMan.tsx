@@ -9,7 +9,11 @@ const LEFT_LEG = <div className="leg left-leg" key={"left-leg"} />
 
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
-const HangingMan = ({totalIncorrectGuesses}: {totalIncorrectGuesses: number}) => {
+type HangingManProps = {
+    totalIncorrectGuesses: number
+}
+
+const HangingMan = ({totalIncorrectGuesses}: HangingManProps) => {
     return (
         <>
             {BODY_PARTS.slice(0, totalIncorrectGuesses)}

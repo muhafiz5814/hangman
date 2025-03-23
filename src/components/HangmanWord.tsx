@@ -1,6 +1,11 @@
 import "./HangmanWord.css";
 
-const HangmanWord = ({ wordToGuess, guessedLetters, result }: { wordToGuess: string, guessedLetters: string[], result: string | undefined }) => {
+type HangmanWordProps = {
+    wordToGuess: string,
+    guessedLetters: string[],
+    result: string | undefined
+}
+const HangmanWord = ({ wordToGuess, guessedLetters, result }: HangmanWordProps) => {
     
     console.log(wordToGuess);
 

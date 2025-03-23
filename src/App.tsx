@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 import './App.css'
 
-const getWord = () => words[Math.floor(Math.random() * words.length)];
+const getWord = (): string => words[Math.floor(Math.random() * words.length)];
 
 function App() {
 
@@ -80,7 +80,6 @@ function App() {
         )
       }
       
-
       <HangmanDrawing totalIncorrectGuesses = {incorrectGuesses.length} />
       <HangmanWord wordToGuess={randomWord} guessedLetters={ guessedLetters } result={result} />
       <Keyboard addGuessedLetter={addGuessedLetter} incorrectGuesses={incorrectGuesses} result={result} />

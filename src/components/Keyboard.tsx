@@ -1,6 +1,12 @@
 import "./Keyboard.css";
 
-const Keyboard = ({addGuessedLetter, incorrectGuesses, result}: {addGuessedLetter: (letter: string) => void, incorrectGuesses: string[], result: string | undefined}) => {
+type KeyboardProps = {
+    addGuessedLetter: (letter: string) => void,
+    incorrectGuesses: string[],
+    result: string | undefined
+}
+
+const Keyboard = ({addGuessedLetter, incorrectGuesses, result}: KeyboardProps) => {
 
     const KEYS: string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 

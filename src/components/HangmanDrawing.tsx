@@ -2,7 +2,11 @@ import HangingMan from "./HangingMan";
 
 import "./HangmanDrawing.css";
 
-const HangmanDrawing = ({totalIncorrectGuesses}: {totalIncorrectGuesses: number}) => {
+type HangmanDrawingProps = {
+    totalIncorrectGuesses: number
+}
+
+const HangmanDrawing = ({totalIncorrectGuesses}: HangmanDrawingProps) => {
     return (
         <div id="pole-container">
             <div id="pole-top" />
