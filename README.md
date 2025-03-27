@@ -1,54 +1,28 @@
-# React + TypeScript + Vite
+# Hangman
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hangman is a word guessing game built using React + TypeScript + Vite.  
 
-Currently, two official plugins are available:
+It's a concept of either guess the word or hang. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I got an Idea of making this game from a [youtube tutorial](https://www.youtube.com/watch?v=-ONUyenGnWw&ab_channel=WebDevSimplified), but instead of copy pasting code from there, I tried to implement it on my own. Although I took some help from tutorial in implementing some functionalities but it's not completely same.  
 
-## Expanding the ESLint configuration
+The steps and process I followed to build this game project is also different from which is shown in tutorial. This can be verified from [commit history](https://github.com/muhafiz5814/hangman/commits/master/) of this project.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Game overview
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Once a player lands on the page, a random word of length between 4 to 8 will be selected.
+- At first word will not be visible to the player but length of the word will be known to the player with the help of blank spaces available for each letter of the word.
+- Player will have to guess the word in limited guesses.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Rules for Hangman
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- At first, player will only be shown blank spaces equal to the length of the word which is to be guessed.
+- To guess a letter, player can either select a key from on-screen keybaord or press a key on physical keyboard of their system.
+- If the player has guessed a letter which is present in the word, it's appearence(s) in the word will be visible to the player above respective blank space(s).
+- If the player tries to select the same correct letter again, it will have no effect.
+- If the player has guessed a letter which is **not** present in the word, respective key of the letter on keyboard will be disabled and player will not be able to select that letter again.
+- Player can make maximum `5` incorrect guesses before winning or losing the game as `6th` incorrect guess will be the last and game will be over.
+- With every incorrect guess, 1 body part of the hanging man will be visible on the screen.
+- After `6` incorrect guesses, all body parts of the hanging man will be visible, it means player has not guessed the word and lost the game.
+- If a player is able to guess all the letters of the word before a full hanging man is visible on screen, player has won the game.
+- To try again with new random word, player can `press Enter` or `Refresh` the page. (Remember, once a new word has been loaded, pressing Enter will **not** have any effect and it will not reset the game to a new word untill the game reaches to a result, either win or lose. Refreshing the page will still reset the game and will reload a new word at any stage of the game)
