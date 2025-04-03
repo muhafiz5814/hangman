@@ -7,6 +7,7 @@
     position: absolute;
     top: 50px;
     right: -20px;
+    animation: drop-in 1.5s ease-out backwards;
 }
 
 #body {
@@ -17,6 +18,7 @@
     position: absolute;
     top: 100px;
     right: 0px;
+    animation: fade-in .5s linear forwards;
 }
 
 .arm {
@@ -31,10 +33,12 @@
 
 .right-arm {
     transform: rotate(-120deg);
+    animation: slide-in-right-arm 1.25s ease-out forwards;
 }
 
 .left-arm {
-    transform: rotate(120deg);      
+    transform: rotate(120deg);
+    animation: slide-in-left-arm 1.25s ease-out forwards;
 }
 
 .leg{
@@ -49,8 +53,50 @@
 
 .right-leg {
     transform: rotate(-35deg);
+    animation: slide-in-right-leg 1.25s ease-out forwards;
 }
 
 .left-leg {
-    transform: rotate(35deg);   
+    transform: rotate(35deg); 
+    animation: slide-in-left-leg 1.25s ease-out forwards;
+}
+
+@keyframes drop-in {
+    from {
+        top: -100px;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-right-arm {
+    from {
+        transform: translateX(50vw);
+    }
+}
+
+@keyframes slide-in-left-arm {
+    from {
+        transform: translateX(-60vw);
+    }
+}
+
+@keyframes slide-in-right-leg {
+    from {
+        transform: translateX(50vw);
+    }
+}
+
+@keyframes slide-in-left-leg {
+    from {
+        transform: translateX(-60vw);
+    }
 }
