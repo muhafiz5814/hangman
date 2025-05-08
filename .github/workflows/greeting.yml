@@ -1,0 +1,31 @@
+name: Greet Every Contributor
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greet Contributor using GitHub Script
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const eventType = context.eventName === "issues" ? "issue" : "pull-request";
+            const number = eventType === "issue"
+              ? context.payload.issue.number
+              : context.payload.pull_request.number;
+            const message = `Hi! Thanks for opening this ${eventType}. We are reviewing it and will respond soon.`
+            
+            await github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: number,
+              body: message
+            })
