@@ -23,7 +23,7 @@ jobs:
               : context.payload.pull_request.number;
             const message = `Hi! Thanks for opening this ${eventType}. We are reviewing it and will respond soon.`
             
-            await github.issues.createComment({
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: number,
