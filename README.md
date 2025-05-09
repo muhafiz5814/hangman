@@ -6,11 +6,11 @@ It's a concept of either guess the word or hang.
 
 I got an Idea of making this game from a [youtube tutorial](https://www.youtube.com/watch?v=-ONUyenGnWw&ab_channel=WebDevSimplified), but instead of copy pasting code from there, I tried to implement it on my own. Although I took some help from tutorial in implementing some functionalities but it's not completely same.  
 
-The steps and process I followed to build this game project is also different from which is shown in tutorial. This can be verified from [commit history](https://github.com/muhafiz5814/hangman/commits/master/) of this project.
+Steps and process I followed to build this game project is also different from which is shown in tutorial. This can be verified from [commit history](https://github.com/muhafiz5814/hangman/commits/master/) of this project.
 
 ## Game overview
 
-- Once a player lands on the page, a random word of length between 4 to 8 will be selected.
+- Once a player lands on the home page, a random word of length between 4 to 8 will be selected.
 - At first word will not be visible to the player but length of the word will be known to the player with the help of blank spaces available for each letter of the word.
 - Player will have to guess the word in limited guesses.
 
